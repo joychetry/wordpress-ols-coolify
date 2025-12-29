@@ -28,7 +28,7 @@ services:
       - php_extensions:/usr/local/lsws/lsphp${PHP_VERSION}/lib/php
       - wordpress_logs:/var/log/wordpress
       # --- CORRECTED DESTINATION PATH BELOW ---
-      - /data/coolify/applications/dsccwkokwwsk4cssoggossk0/my-custom.ini:/usr/local/lsws/lsphp82/etc/php/8.2/mods-available/99-custom.ini
+      # - {COOLIFY_MOUNT_PATH}/my-custom.ini:/usr/local/lsws/lsphp82/etc/php/8.2/mods-available/99-custom.ini
     healthcheck:
       test: ["CMD", "curl", "-f", "http://127.0.0.1"]
       interval: 2s
